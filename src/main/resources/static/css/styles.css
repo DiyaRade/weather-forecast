@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1d3557, #457b9d);
+    color: #f1faee;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 16px;
+}
+
+.app-container {
+    background: rgba(17, 25, 40, 0.9);
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+    padding: 24px;
+    width: 100%;
+    max-width: 960px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #a8dadc;
+    font-size: 0.95rem;
+}
+
+.search-section {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.search-section input {
+    flex: 1;
+    padding: 10px 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.08);
+    color: #f1faee;
+}
+
+.search-section input::placeholder {
+    color: rgba(241, 250, 238, 0.7);
+}
+
+.search-section button {
+    padding: 10px 18px;
+    border-radius: 999px;
+    border: none;
+    background: linear-gradient(135deg, #e63946, #ff6b6b);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease, opacity 0.1s ease;
+}
+
+.search-section button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(230, 57, 70, 0.4);
+}
+
+.search-section button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.card {
+    background: rgba(10, 14, 23, 0.9);
+    border-radius: 16px;
+    padding: 18px;
+    margin-top: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.current-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.icon-container img {
+    width: 96px;
+    height: 96px;
+}
+
+.forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.forecast-item {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.forecast-item h4 {
+    margin-bottom: 4px;
+    font-size: 0.9rem;
+}
+
+.forecast-item p {
+    font-size: 0.8rem;
+    color: #dfe7fd;
+}
+
+.forecast-item img {
+    width: 48px;
+    height: 48px;
+}
+
+.error {
+    margin-bottom: 8px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background: rgba(230, 57, 70, 0.18);
+    border: 1px solid rgba(230, 57, 70, 0.5);
+    color: #ffe5e9;
+    font-size: 0.9rem;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .current-main {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+

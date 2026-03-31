@@ -1,0 +1,9 @@
+target/
+.idea/
+.vscode/
+*.iml
+*.log
+
+# Local overrides (optional if you create them)
+application-local.properties
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}" href="/css/styles.css">
+</head>
+<body>
+<div class="app-container">
+    <header>
+        <h1>Weather Forecast</h1>
+        <p>Real-time current weather and 5-day forecast</p>
+    </header>
+
+    <section class="search-section">
+        <input id="cityInput" type="text" placeholder="Enter city name (e.g. London)">
+        <button id="searchButton">Search</button>
+    </section>
+
+    <section id="errorBox" class="error hidden"></section>
+
+    <section id="currentWeather" class="card hidden">
+        <h2>Current Weather</h2>
+        <div class="current-main">
+            <div>
+                <h3 id="location"></h3>
+                <p id="condition"></p>
+                <p><span id="tempC"></span> °C / <span id="tempF"></span> °F</p>
+                <p>Humidity: <span id="humidity"></span>%</p>
+                <p>Updated at: <span id="timestamp"></span></p>
+            </div>
+            <div class="icon-container">
+                <img id="icon" alt="Weather icon" />
+            </div>
+        </div>
+    </section>
+
+    <section id="forecastSection" class="card hidden">
+        <h2>5-Day Forecast</h2>
+        <div id="forecastList" class="forecast-grid"></div>
+    </section>
+</div>
+
+<script src="/js/app.js"></script>
+</body>
+</html>
+
